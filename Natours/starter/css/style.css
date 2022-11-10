@@ -72,6 +72,8 @@ header {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    /* Prevents animations from shaking */
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -79,6 +81,23 @@ header {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    
+    /* Apply key frames animation */
+    animation: moveInLeft 1s ease-out;
+
+
+    /* We can also be more verbose specifying animation properties */
+    /* 
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation: ease-out; 
+    */
+
+    /* Other properties of animation*/
+
+    /* animation-delay: 3s; "Delay before starting animation"*/
+    /* animation-iteration-count: 3; "Specify number of times animation plays (default 1)"*/
+    /* animation-timing-function: ease-in-out; "Ease animation in/out or in and out" */
 }
 
 .heading-primary-sub {
@@ -86,4 +105,43 @@ header {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+
+    animation: moveInRight 1s ease-out;
+}
+
+/* Animation */
+
+@keyframes moveInLeft {
+    /* start of animation = 0%, end = 100% */
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+
+    80% {
+    /* go past starting position 0 */
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        /* default starting position */    
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;  
+        transform: translate(0);
+    }
 }
