@@ -1,0 +1,48 @@
+@import "../abstracts/variables";
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey-dark;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    // Prevents animations from shaking
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        // Apply key frames animation
+        animation: moveInLeft 1s ease-out;
+
+        // We can also be more verbose specifying animation properties 
+        // animation-name: moveInLeft;
+        // animation-duration: 1s;
+        // animation: ease-out;
+
+        // Other properties of animation
+
+        // animation-delay: 3s; "Delay before starting animation"
+        // animation-iteration-count: 3; "Specify number of times animation plays (default 1)"
+        // animation-timing-function: ease-in-out; "Ease animation in/out or in and out"
+   
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
