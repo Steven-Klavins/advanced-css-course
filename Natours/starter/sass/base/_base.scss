@@ -1,0 +1,23 @@
+// Hard Reset
+// Some browsers apply their own default margin and padding
+// Remove this for consistancey accross browsers
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // Set default font to 10px so rem values can easily be calculated 
+    // Set default font as % for accessability so users can resize fonts 
+    // Browsers use a default font size of 16px (10/16 = 0.625) > 62.5%
+    font-size: 62.5%;
+}
+
+body {
+    padding: 3rem;
+    box-sizing: border-box;
+}
