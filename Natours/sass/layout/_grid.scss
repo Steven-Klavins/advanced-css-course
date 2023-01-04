@@ -56,5 +56,15 @@
         width: 50%;
         padding: 0 4rem;
     }
+
+    &__3-of-3 {
+        width: calc(100% / 3);
+        padding: 0 4rem;
+    }
+
+    &__4-of-4 {
+        width: 25%;
+        padding: 0 4rem;
+    } 
 }
 
