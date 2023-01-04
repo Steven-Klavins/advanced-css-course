@@ -43,6 +43,15 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
     // The after sudo element is treated as child of the class/element it's added to
 
     &::after {
